@@ -2,126 +2,168 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quilo News</title>
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="shortcut icon" href="assets/images/logo.png" type="image/png">
-  <meta name="google-site-verification" content="nAH_Rn6pB0cJaAhiIqVQA3K1ZFslLZCrWyAYDqdGWmU" />
-  <meta name="google-site-verification" content="nAH_Rn6pB0cJaAhiIqVQA3K1ZFslLZCrWyAYDqdGWmU" />
-  <meta property="og:title" content="Quilo News - Latest Tech and World News">
-<meta property="og:image" content="https://zeyadmahmoud777.github.io/Quilo-News/assets/images/logo.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:url" content="https://zeyadmahmoud777.github.io/Quilo-News/">
-<meta name="description" content="Stay updated with the latest news in AI, education, trending technology, gaming, and global trends. Explore insightful articles and trending updates from around the world.">
-<meta name="keywords" content="AI news, education updates, world news, technology, latest articles">
-<meta name="author" content="Quilo News">
-<meta property="og:title" content="Quilo News - Latest AI, Education & World Updates">
-<meta property="og:description" content="Stay updated with the latest news in AI, education, and global trends.">
-<meta property="og:type" content="website">
-<meta name='admaven-placement' content=Bqja8qTs9>
-<meta name="monetag" content="2a4ea968548fea46336bb7497a64dd3d">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quilo Tools | 100% Free Online Web Utilities & Developer Tools</title>
+    <meta name="description"
+        content="Access a suite of professional, private, and fast online tools. From image compression to JSON formatting, Quilo Tools offers secure browser-side utilities for free.">
+    <meta name="keywords"
+        content="free online tools, web utilities, image compressor, json formatter, qr generator, developer tools, Quilo Tools">
+    <link rel="canonical" href="https://zeyadmahmoud777.github.io/Quilo-Tools/">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Quilo Tools - All-in-One Online Utility Hub">
+    <meta property="og:description" content="Fast, Private, and Free Web Tools for Everyone.">
+    <meta property="og:image" content="https://zeyadmahmoud777.github.io/Quilo-Tools/assets/images/fav.jpg">
+    <meta property="og:url" content="https://zeyadmahmoud777.github.io/Quilo-Tools/">
+    <link rel="icon" type="image/png" href="https://zeyadmahmoud777.github.io/Quilo-Tools/assets/images/fav.png">
+    <link rel="apple-touch-icon" href="https://zeyadmahmoud777.github.io/Quilo-Tools/assets/images/fav.png">    
+    <link rel="stylesheet" href="/assets/css/tool.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-  <header>
-    <h1>Quilo News</h1>
-  </header>
-  <nav>
-    <a href="https://zeyadmahmoud777.github.io/Quilo-News/index.html">Tech</a>
-    <a href="https://zeyadmahmoud777.github.io/Quilo-News/sports.html">Sports</a>
-    <a href="https://zeyadmahmoud777.github.io/Quilo-News/gaming.html">Gaming</a>
-    <a href="https://zeyadmahmoud777.github.io/Quilo-News/world.html">World</a>
-    <a href="https://zeyadmahmoud777.github.io/Quilo-News/about.html">About</a>
-    <a href="https://zeyadmahmoud777.github.io/Quilo-News/contact.html">Contact</a>
-  </nav>
-  <main>
-    <article id="main-article">
-      <!-- Main Article from JSON  -->
-    </article>
-    <aside id="sidebar">
-      <h3>Read More</h3>
-      <div id="sidebar-links"></div>
-      <div class="ads"></div>
-      <div class="boxe"></div>
-      <!-- Ads and side content -->
-    </aside>
-  </main>
-
-  <section class="latest-news">
-    <h2>Latest News</h2>
-    <ul id="latest-news-list"></ul>
-  </section>
-
-  <section class="more-boxes" id="more-boxes">
-    <!-- More news boxes -->
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Quilo News. All Rights Reserved.</p>
-  </footer>
-  <script src="main.js"></script>
-<script type='text/javascript' src='//pl27770246.revenuecpmgate.com/8d/66/df/8d66dfa5380dfa347abf93edcfc4b982.js'></script>
-
-  <script>
-    async function loadNews() {
-      const res = await fetch("data/News.json");
-      const news = await res.json();
-
-      // 🔹 فلترة الأخبار لتكون من نوع "tech" فقط
-      const techNews = news.filter(article => article.category === "tech");
-
-      // 🔹 ترتيب الأخبار حسب الأحدث (id)
-      const sortedNews = techNews.sort((a, b) => b.id - a.id);
-
-      // 🔹 تحديد المقال الرئيسي وأحدث 4 مقالات بعده
-      const mainArticle = sortedNews[0];
-      const latestFour = sortedNews.slice(1, 5);
-
-      // 📰 عرض المقال الرئيسي
-      document.getElementById("main-article").innerHTML = `
-        <h2>${mainArticle.title}</h2>
-        <h3>${mainArticle.content_one}</h3>
-        <img loading="lazy" src="${mainArticle.image_one}" alt="${mainArticle.title}">
-        <p>${mainArticle.content_one_p}</p>
-        <div class="ad"></div>
-        <h3>${mainArticle.content_two}</h3>
-        <img loading="lazy" src="${mainArticle.image_two}" alt="${mainArticle.title}">
-        <p>${mainArticle.content_two_p}</p>
-        <div class="ad"></div>
-        <h3>${mainArticle.content_three}</h3>
-        <img loading="lazy" src="${mainArticle.image_three}" alt="${mainArticle.title}">
-        <p>${mainArticle.content_three_p}</p>
-        <div class="ad"></div>
-      `;
-
-      // 🧱 عرض باقي الأخبار (آخر 4)
-      const boxes = document.querySelector(".more-boxes");
-      latestFour.forEach(article => {
-        boxes.innerHTML += `
-          <div class="box">
-            <a href="${article.link}">
-              <img src="${article.image_one}" alt="${article.title}">
-              <h3>${article.title}</h3>
-              <p>${article.content_one_p.substring(0, 80)}...</p>
+    <nav>
+        <a href="/index.html" class="logo"><i class="fas fa-bolt" style="color:var(--primary)"></i> Quilo Tools</a>
+        <div class="nav-links">
+            <a href="../tools/en/blog/fast-loading-images/">Blog</a>
+            <a href="../tools/en/image-converter/">Images</a>
+            <a href="../tools/en/qr-generator/">QR Code</a>
+            <a href="../tools/en/word-counter/">Text</a>
+            <a href="../tools/en/image-compressor/">Compressor</a>
+            <a href="../tools/en/yt-thumbnail/">Thumbnail</a>
+            <a href="../tools/en/password-generator/">Password-Gen</a>
+            <a href="../tools/en/json-formatter/">Json-formatter</a>
+            <a href="../tools/en/unit-converter/">Unit Converter</a>
+        </div>
+    </nav>
+    <section class="hero">
+        <h1>Simplify Your Workflow</h1>
+        <p>Professional, privacy-focused web tools for creators and developers. 100% Free.</p>
+    </section>
+    <div class="grid-container">
+        <a href="../tools/en/image-converter/" class="tool-card">
+            <span class="badge">Fast</span>
+            <div class="icon-box"><i class="fas fa-sync-alt"></i></div>
+            <h3>Image Converter</h3>
+            <p>Convert PNG to high-quality JPG instantly in your browser.</p>
+        </a>
+        <a href="../tools/en/qr-generator/" class="tool-card">
+            <span class="badge">Popular</span>
+            <div class="icon-box"><i class="fas fa-qrcode"></i></div>
+            <h3>QR Generator</h3>
+            <p>Generate custom QR codes for URLs, text, or Wi-Fi.</p>
+        </a>
+        <a href="../tools/en/word-counter/" class="tool-card">
+            <div class="icon-box"><i class="fas fa-spell-check"></i></div>
+            <h3>Word Counter</h3>
+            <p>Analyze text length, character counts, and reading time.</p>
+        </a>
+            <a href="../tools/en/image-compressor/" class="tool-card">
+                <span class="badge">Hot</span>
+                <div class="icon-box"><i class="fas fa-compress-arrows-alt"></i></div>
+                <h3>Image Compressor</h3>
+                <p>Reduce image size without quality loss.</p>
             </a>
-          </div>
-        `;
-      });
-    }
+            <a href="../tools/en/yt-thumbnail/" class="tool-card">
+                <div class="icon-box"><i class="fab fa-youtube"></i></div>
+                <h3>YT Thumbnail</h3>
+                <p>Download HD thumbnails from any YouTube video.</p>
+            </a>
+            <a href="../tools/en/password-generator/" class="tool-card">
+                <div class="icon-box"><i class="fas fa-lock"></i></div>
+                <h3>Password Gen</h3>
+                <p>Generate secure passwords.</p>
+            </a>
+            <a href="../tools/en/qr-generator/" class="tool-card">
+                <div class="icon-box"><i class="fas fa-qrcode"></i></div>
+                <h3>QR Creator</h3>
+                <p>Build custom QR codes.</p>
+            </a>
+            <a href="../tools/en/unit-converter/" class="tool-card">
+                <div class="icon-box"><i class="fas fa-ruler-combined"></i></div>
+                <h3>Unit Converter</h3>
+                <p>Fast units transformation.</p>
+            </a>
+            <a href="../tools/en/json-formatter/" class="tool-card">
+                <span class="badge" style="background: rgba(16, 185, 129, 0.1); color: #10b981;">Dev Tool</span>
+                <div class="icon-box"><i class="fas fa-code"></i></div>
+                <h3>JSON Formatter</h3>
+                <p>Beautify and validate your JSON code instantly.</p>
+            </a>    
+            <a href="../tools/en/blog/fast-loading-images/" class="tool-card">
+                <span class="badge" style="background: rgba(99, 102, 241, 0.1); color: var(--primary);">Article</span>
+                <div class="icon-box"><i class="fas fa-blog"></i></div>
+                <h3>Speed Guide</h3>
+                <p>How to optimize images for 100/100 Google PageSpeed.</p>
+            </a>
+            <div class="tool-card coming-soon" style="opacity: 0.5;">
+                <span class="badge" style="background: #ef4444;">Beta</span>
+                <div class="icon-box"><i class="fas fa-file-pdf"></i></div>
+                <h3>PDF Tools</h3>
+                <p>Merging & Editing (Soon).</p>
+            </div>
+    </div>
+    <section class="how-it-works" style=" padding: 10px 15px; text-align: center; background: rgba(255,255,255,0.02);">
+        <h2 style="font-size: 2rem; margin-bottom: 20px;">Simple. Private. Fast.</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1000px; margin: 0 auto;">
+            <div style="flex: 1; min-width: 250px;">
+                <i class="fas fa-upload" style="font-size: 2rem; color: var(--primary); margin-bottom: 15px;"></i>
+                <h4>1. Select Tool</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Choose the professional utility you need from our
+                    suite.</p>
+            </div>
+            <div style="flex: 1; min-width: 250px;">
+                <i class="fas fa-magic" style="font-size: 2rem; color: var(--primary); margin-bottom: 15px;"></i>
+                <h4>2. Magic Processing</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Our browser-side engine processes your data
+                    instantly.</p>
+            </div>
+            <div style="flex: 1; min-width: 250px;">
+                <i class="fas fa-download" style="font-size: 2rem; color: var(--primary); margin-bottom: 15px;"></i>
+                <h4>3. Get Result</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Download your optimized file or copy your result
+                    safely.</p>
+            </div>
+        </div>
+    </section>
+    <section class="stats" style="padding: 70px 40px; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div
+            style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; max-width: 900px; margin: 0 auto;">
+            <div style="text-align: center;">
+                <h3 style="font-size: 2.5rem; margin: 0; color: #fff;">100%</h3>
+                <p style="color: var(--primary); font-weight: bold;">Private & Secure</p>
+            </div>
+            <div style="text-align: center;">
+                <h3 style="font-size: 2.5rem; margin: 0; color: #fff;">0ms</h3>
+                <p style="color: var(--primary); font-weight: bold;">Server Wait Time</p>
+            </div>
+            <div style="text-align: center;">
+                <h3 style="font-size: 2.5rem; margin: 0; color: #fff;">Free</h3>
+                <p style="color: var(--primary); font-weight: bold;">No Subscriptions</p>
+            </div>
+        </div>
+    </section>
+    <section style="max-width: 800px; margin: 70px auto; padding: 0 20px; color: var(--text-muted); line-height: 1.8;">
+        <h2 style="color: #fff;">The Ultimate Hub for Online Web Tools</h2>
+        <p>
+            Quilo Tools is designed for developers, designers, and content creators who value <strong>speed and
+                privacy</strong>. Unlike other platforms, we don't store your data. Whether you need an <a
+                href="en/image-compressor/" style="color: var(--primary);">image compressor</a>, a <a
+                href="en/qr-generator/" style="color: var(--primary);">QR code generator</a>, or <a
+                href="en/json-formatter/" style="color: var(--primary);">JSON formatting</a>, our tools work directly in
+            your browser. This ensures maximum security and zero lag.
+        </p>
+        <p>
+            Our mission is to provide professional-grade utilities without the clutter of annoying ads or the need for
+            expensive subscriptions. Explore our ever-growing library of 100% free online tools.
+        </p>
+    </section>
 
-    loadNews();
-  </script>
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SNJTKY1W9T"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-SNJTKY1W9T');
-  </script>
+    <footer>
+        <p>&copy; 2026 Quilo Tools. Part of the Quilo Media Network.</p>
+    </footer>
 </body>
-
 </html>

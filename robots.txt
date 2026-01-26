@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /assets/
+
 Sitemap: https://zeyadmahmoud777.github.io/Quilo-News/sitemap.xml
