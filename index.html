@@ -25,6 +25,79 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <style>
+        .ad-slot {
+            border: 2px dashed rgba(99, 102, 241, 0.45);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.02);
+            overflow: hidden;
+        }
+
+        .ad-wrap {
+            max-width: 1200px;
+            margin: 18px auto;
+            padding: 0 20px;
+        }
+
+        .ad-728x90 {
+            width: 728px;
+            height: 90px;
+            margin: 12px auto 18px;
+            max-width: 100%;
+        }
+
+        .ad-160x300 {
+            width: 160px;
+            height: 300px;
+            margin: 18px auto;
+        }
+
+        .ad-side {
+            width: 300px;
+            height: 600px;
+        }
+
+        .ad-sides {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 140px;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .ad-sides .ad-side {
+            pointer-events: auto;
+            position: absolute;
+        }
+
+        .ad-sides .ad-side.left {
+            left: 12px;
+        }
+
+        .ad-sides .ad-side.right {
+            right: 12px;
+        }
+
+        @media (max-width: 1300px) {
+            .ad-sides {
+                display: none;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .ad-728x90 {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 728 / 90;
+            }
+        }
+    </style>
     <nav>
         <a href="https://zeyadmahmoud777.github.io/Quilo-Tools/index.html" class="logo"><i class="fas fa-bolt" style="color:var(--primary)"></i> Quilo Tools</a>
         <div class="nav-links">
@@ -42,6 +115,58 @@
     <section class="hero">
         <h1>Simplify Your Workflow</h1>
         <p>Professional, privacy-focused web tools for creators and developers. 100% Free.</p>
+    </section>
+    <aside class="ad-sides" aria-label="Side Ad Banners">
+        <div class="ad-slot ad-side left"><script>
+            atOptions = {
+              'key' : 'd96f949f8e26fbd1204d45e075a5f96a',
+              'format' : 'iframe',
+              'height' : 600,
+              'width' : 160,
+              'params' : {}
+            };
+          </script>
+          <script src="https://www.highperformanceformat.com/d96f949f8e26fbd1204d45e075a5f96a/invoke.js"></script>
+          </div>
+        <div class="ad-slot ad-side right"><script>
+            atOptions = {
+              'key' : 'd96f949f8e26fbd1204d45e075a5f96a',
+              'format' : 'iframe',
+              'height' : 600,
+              'width' : 160,
+              'params' : {}
+            };
+          </script>
+          <script src="https://www.highperformanceformat.com/d96f949f8e26fbd1204d45e075a5f96a/invoke.js"></script>
+          </div>
+    </aside>
+
+    <section class="ad-wrap" aria-label="Top Banner Ad">
+        <div class="ad-slot ad-728x90"><script>
+            atOptions = {
+              'key' : '549e2636b55e4cbea9277420ca0881d4',
+              'format' : 'iframe',
+              'height' : 90,
+              'width' : 728,
+              'params' : {}
+            };
+          </script>
+          <script src="https://www.highperformanceformat.com/549e2636b55e4cbea9277420ca0881d4/invoke.js"></script>
+          </div>
+    </section>
+
+    <section class="ad-wrap" aria-label="Inline Ad 1">
+        <div class="ad-slot ad-160x300"><script>
+  atOptions = {
+    'key' : '148548001bbeb2fece6e36fb27f3a2b3',
+    'format' : 'iframe',
+    'height' : 300,
+    'width' : 160,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/148548001bbeb2fece6e36fb27f3a2b3/invoke.js"></script>
+</div>
     </section>
     <div class="grid-container">
         <a href="https://zeyadmahmoud777.github.io/Quilo-Tools/tools/en/image-converter/" class="tool-card">
@@ -106,6 +231,20 @@
                 <p>Merging & Editing (Soon).</p>
             </div>
     </div>
+
+    <section class="ad-wrap" aria-label="Inline Ad 2">
+        <div class="ad-slot ad-160x300"><script>
+  atOptions = {
+    'key' : '148548001bbeb2fece6e36fb27f3a2b3',
+    'format' : 'iframe',
+    'height' : 300,
+    'width' : 160,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/148548001bbeb2fece6e36fb27f3a2b3/invoke.js"></script>
+</div>
+    </section>
     <section class="how-it-works" style=" padding: 10px 15px; text-align: center; background: rgba(255,255,255,0.02);">
         <h2 style="font-size: 2rem; margin-bottom: 20px;">Simple. Private. Fast.</h2>
         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1000px; margin: 0 auto;">
@@ -129,6 +268,20 @@
             </div>
         </div>
     </section>
+
+    <section class="ad-wrap" aria-label="Inline Ad 3">
+        <div class="ad-slot ad-160x300"><script>
+  atOptions = {
+    'key' : '148548001bbeb2fece6e36fb27f3a2b3',
+    'format' : 'iframe',
+    'height' : 300,
+    'width' : 160,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/148548001bbeb2fece6e36fb27f3a2b3/invoke.js"></script>
+</div>
+    </section>
     <section class="stats" style="padding: 70px 40px; border-top: 1px solid rgba(255,255,255,0.05);">
         <div
             style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; max-width: 900px; margin: 0 auto;">
@@ -146,6 +299,20 @@
             </div>
         </div>
     </section>
+
+    <section class="ad-wrap" aria-label="Inline Ad 4">
+        <div class="ad-slot ad-160x300"><script>
+  atOptions = {
+    'key' : '148548001bbeb2fece6e36fb27f3a2b3',
+    'format' : 'iframe',
+    'height' : 300,
+    'width' : 160,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/148548001bbeb2fece6e36fb27f3a2b3/invoke.js"></script>
+</div>
+    </section>
     <section style="max-width: 800px; margin: 70px auto; padding: 0 20px; color: var(--text-muted); line-height: 1.8;">
         <h2 style="color: #fff;">The Ultimate Hub for Online Web Tools</h2>
         <p>
@@ -160,6 +327,20 @@
             Our mission is to provide professional-grade utilities without the clutter of annoying ads or the need for
             expensive subscriptions. Explore our ever-growing library of 100% free online tools.
         </p>
+    </section>
+
+    <section class="ad-wrap" aria-label="Inline Ad 5">
+        <div class="ad-slot ad-160x300"><script>
+  atOptions = {
+    'key' : '148548001bbeb2fece6e36fb27f3a2b3',
+    'format' : 'iframe',
+    'height' : 300,
+    'width' : 160,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/148548001bbeb2fece6e36fb27f3a2b3/invoke.js"></script>
+</div>
     </section>
 
     <footer>
