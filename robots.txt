@@ -1,5 +1,45 @@
+# Quilo Tools - Search Engine Crawling Rules
+# https://zeyadmahmoud777.github.io/Quilo-Tools/
+
+# Allow all search engine bots to crawl the entire site
 User-agent: *
 Allow: /
-Disallow: /assets/
 
-Sitemap: https://zeyadmahmoud777.github.io/Quilo-News/sitemap.xml
+# Google
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing / Microsoft
+User-agent: Bingbot
+Allow: /
+
+# Yahoo / DuckDuckGo
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Yandex
+User-agent: Yandex
+Allow: /
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+
+# Social preview crawlers (Facebook, Twitter/X, LinkedIn, etc.)
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Sitemap location (helps Google discover all pages)
+Sitemap: https://zeyadmahmoud777.github.io/Quilo-Tools/sitemap.xml
